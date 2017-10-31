@@ -1,1 +1,11 @@
-j8贵
+public void find(String src) {
+	File file = new File(src);
+	File[] list = file.listFiles();
+	for (File f : list) {
+		if(f.isDirectory()) {
+			find(f);
+		} else {
+			// 这里即对文件进行操作
+		}
+	}
+}
